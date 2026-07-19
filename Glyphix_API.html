@@ -1,0 +1,255 @@
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: monospace; font-size: 13px; text-align: left;">
+  <thead>
+    <tr style="background-color: #1a1a1a; color: #ffffff;">
+      <th style="width: 20%;">Функция</th>
+      <th style="width: 30%;">Краткое описание</th>
+      <th style="width: 10%;">Доступ<br>Эмулятор</th>
+      <th style="width: 10%;">Доступ<br>Часы</th>
+      <th style="width: 30%;">Дельта / Статус (Аппаратные ограничения)</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.device</td>
+    </tr>
+    <tr><td><code>getInfo</code></td><td>Получение основной информации об устройстве</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getId</code></td><td>Получение уникального идентификатора</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getDeviceId</code></td><td>Получение аппаратного ID устройства</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getSerial</code></td><td>Получение серийного номера</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getTotalStorage</code></td><td>Общий объем ПЗУ</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getAvailableStorage</code></td><td>Доступный объем ПЗУ</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>screenWidth</code></td><td>Ширина экрана в пикселях (Свойство)</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>screenHeight</code></td><td>Высота экрана в пикселях (Свойство)</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>screenDensity</code></td><td>Плотность пикселей (Свойство)</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>screenShape</code></td><td>Форма экрана (rect/circle) (Свойство)</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>memoryProfile</code></td><td>Профиль выделения ОЗУ (Свойство)</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.fetch</td>
+    </tr>
+    <tr><td><code>fetch</code></td><td>Сетевой HTTP-запрос</td><td>Да</td><td>Да</td><td>Штатный функционал (требует MAS/Bluetooth)</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.prompt</td>
+    </tr>
+    <tr><td><code>showToast</code></td><td>Всплывающее короткое уведомление</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>showPopup</code></td><td>Диалоговое окно</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>showIme</code></td><td>Вызов экранной клавиатуры</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.storage</td>
+    </tr>
+    <tr><td><code>set</code></td><td>Запись ключа-значения в БД</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>get</code></td><td>Чтение значения из БД</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>delete</code></td><td>Удаление ключа из БД</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>clear</code></td><td>Очистка всей базы приложения</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.router</td>
+    </tr>
+    <tr><td><code>push</code></td><td>Добавление страницы в стек</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>replace</code></td><td>Замена текущей страницы в стеке</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>back</code></td><td>Возврат на предыдущую страницу</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>close</code></td><td>Закрытие приложения/роутера</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>clear</code></td><td>Очистка стека маршрутизатора</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getLength</code></td><td>Получение длины стека страниц</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getPages</code></td><td>Получение списка объектов страниц</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getPagesName</code></td><td>Получение имен страниц в стеке</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getPage</code></td><td>Получение конкретной страницы</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getIndex</code></td><td>Получение индекса текущей страницы</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>queryPage</code></td><td>Поиск страницы по параметрам</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>queryIndex</code></td><td>Поиск индекса по параметрам</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.app</td>
+    </tr>
+    <tr><td><code>getInfo</code></td><td>Получение информации о текущем приложении</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>loadLibrary</code></td><td>Динамическая загрузка библиотек</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>terminate</code></td><td>Принудительное завершение процесса</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>keepForeground</code></td><td>Удержание процесса на переднем плане</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b> Работа в Headless-режиме невозможна.</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.geolocation</td>
+    </tr>
+    <tr><td><code>getLocation</code></td><td>Одиночный запрос координат</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>subscribe</code></td><td>Подписка на поток геоданных</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>unsubscribe</code></td><td>Отписка от потока геоданных</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getSupportedCoordTypes</code></td><td>Запрос поддерживаемых типов проекций</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.compass</td>
+    </tr>
+    <tr><td><code>subscribe</code></td><td>Подписка на азимут</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>unsubscribe</code></td><td>Отписка от датчика компаса</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>calibration</code></td><td>Запуск калибровки магнитометра</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getValue</code></td><td>Одиночное чтение значения азимута</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.media</td>
+    </tr>
+    <tr><td><code>createAudioPlayer</code></td><td>Создание экземпляра аудиоплеера</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>createAudioRecord</code></td><td>Создание экземпляра записи с микрофона</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>setVolume</code></td><td>Установка системной громкости</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getVolume</code></td><td>Получение текущей громкости</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>parseSongAttributes</code></td><td>Чтение ID3/мета-тегов аудиофайла</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.file</td>
+    </tr>
+    <tr><td><code>readText</code></td><td>Асинхронное чтение текста из файла</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>writeText</code></td><td>Асинхронная запись текста в файл</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>read</code></td><td>Асинхронное чтение бинарных данных</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>write</code></td><td>Асинхронная запись бинарных данных</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>copy</code></td><td>Копирование файла</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>rename</code></td><td>Переименование файла</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>list</code></td><td>Чтение списка директории</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>access</code></td><td>Проверка доступа к файлу/папке</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>mkdir</code></td><td>Создание директории</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>remove</code></td><td>Удаление файла или папки</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>stat</code></td><td>Чтение метаданных файла (размер, дата)</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>readSync</code></td><td>Синхронное бинарное чтение</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>writeSync</code></td><td>Синхронная бинарная запись</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.request</td>
+    </tr>
+    <tr><td><code>download</code></td><td>Загрузка файла по сети</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.launch</td>
+    </tr>
+    <tr><td><code>launch</code></td><td>Запуск приложения по packageId</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>inactive</code></td><td>Перевод в неактивный режим</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>exit</code></td><td>Выход из текущего приложения</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getRunning</code></td><td>Запрос запущенных процессов</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.package</td>
+    </tr>
+    <tr><td><code>list</code></td><td>Список установленных пакетов</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>countOf</code></td><td>Количество пакетов</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getInfo</code></td><td>Информация об установленном пакете</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>manifest</code></td><td>Чтение manifest.json пакета</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>install</code></td><td>Запрос установки пакета</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>remove</code></td><td>Запрос удаления пакета</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.path</td>
+    </tr>
+    <tr><td><code>dirname</code></td><td>Получение директории из пути</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>basename</code></td><td>Получение имени файла из пути</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>extname</code></td><td>Получение расширения файла</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>isAbsolute</code></td><td>Проверка абсолютности пути</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>join</code></td><td>Сборка пути</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>normalize</code></td><td>Нормализация слешей в пути</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>relative</code></td><td>Вычисление относительного пути</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.exchange</td>
+    </tr>
+    <tr><td><code>set</code></td><td>Запись в глобальное хранилище</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>get</code></td><td>Чтение из глобального хранилища</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>delete</code></td><td>Удаление из глобального хранилища</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>watch</code></td><td>Подписка на изменение ключа обмена</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>unwatch</code></td><td>Отписка от изменений</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.battery</td>
+    </tr>
+    <tr><td><code>getStatus</code></td><td>Запрос уровня заряда и статуса</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.schedule</td>
+    </tr>
+    <tr><td><code>scheduleJob</code></td><td>Планирование отложенной задачи</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>cancel</code></td><td>Отмена задачи</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>cancelByKey</code></td><td>Отмена задачи по ключу</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.notification</td>
+    </tr>
+    <tr><td><code>publish</code></td><td>Отправка уведомления в шторку</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>remove</code></td><td>Снятие уведомления программно</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.network</td>
+    </tr>
+    <tr><td><code>subscribe</code></td><td>Подписка на статус сети</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>unsubscribe</code></td><td>Отписка от статуса сети</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getType</code></td><td>Получение типа соединения</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.vibrator</td>
+    </tr>
+    <tr><td><code>vibrate</code></td><td>Активация вибромотора</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.internal</td>
+    </tr>
+    <tr><td><code>globalComponent</code></td><td>Вызов внутреннего компонента ОС</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>setDefaultKeyHandler</code></td><td>Перехват аппаратных кнопок</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.test</td>
+    </tr>
+    <tr><td><code>getByTag</code></td><td>Поиск UI-элемента по тегу</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>getByClass</code></td><td>Поиск UI-элемента по классу</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>getById</code></td><td>Поиск UI-элемента по ID</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>getHasText</code></td><td>Поиск UI-элемента по тексту</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>atPage</code></td><td>Переключение контекста тестирования</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>wait</code></td><td>Ожидание (sleep) в тесте</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>testcase</code></td><td>Определение тест-кейса</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>testsuite</code></td><td>Определение набора тестов</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>run</code></td><td>Запуск автоматизированного теста</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+    <tr><td><code>terminate</code></td><td>Остановка тестирования</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль очищен (EMPTY_OBJECT).</b></td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.devtools</td>
+    </tr>
+    <tr><td><code>[Весь модуль]</code></td><td>Инструменты разработчика</td><td style="color: #e74c3c;"><b>Нет</b></td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>BLOCKED/NOT FOUND</b> на обеих платформах.</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.audiokit</td>
+    </tr>
+    <tr><td><code>getPlayers</code></td><td>Получение пула аудио-игроков</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>getActivePlayer</code></td><td>Получение активного аудиоплеера</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>subscribe</code></td><td>Подписка на события аудиокита</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>unsubscribe</code></td><td>Отписка от событий аудиокита</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.interconnect</td>
+    </tr>
+    <tr><td><code>instance</code></td><td>Мост связи со смартфоном</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Модуль заблокирован (NOT FOUND) в часах.</b></td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @system.cipher</td>
+    </tr>
+    <tr><td><code>base64Encode</code></td><td>Асинхронное кодирование в Base64</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>base64Decode</code></td><td>Асинхронное декодирование из Base64</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>aes</code></td><td>Асинхронное шифрование AES</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>hash</code></td><td>Асинхронное хеширование</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>hmac</code></td><td>Асинхронный HMAC</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>rsa</code></td><td>Асинхронное шифрование RSA</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>sign</code></td><td>Асинхронная криптографическая подпись</td><td>Да</td><td>Да</td><td>Штатный функционал</td></tr>
+    <tr><td><code>hkdf</code></td><td>Деривация ключа (HKDF)</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>pbkdf2</code></td><td>Деривация ключа по паролю (PBKDF2)</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>generatePairKey</code></td><td>Генерация ключевой пары (RSA)</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>base64EncodeSync</code></td><td>Синхронное кодирование Base64</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>base64DecodeSync</code></td><td>Синхронное декодирование Base64</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>aesSync</code></td><td>Синхронное шифрование AES</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>hmacSync</code></td><td>Синхронный HMAC</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>hashSync</code></td><td>Синхронное хеширование</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>rsaSync</code></td><td>Синхронное шифрование RSA</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>signSync</code></td><td>Синхронная криптографическая подпись</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>hkdfSync</code></td><td>Синхронная деривация HKDF</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>pbkdf2Sync</code></td><td>Синхронная деривация PBKDF2</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+    <tr><td><code>generatePairKeySync</code></td><td>Синхронная генерация ключей</td><td>Да</td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>Вырезано OEM.</b></td></tr>
+
+    <tr style="background-color: #34495e; color: #ecf0f1; font-weight: bold;">
+      <td colspan="5">Модуль API: @vendor.device</td>
+    </tr>
+    <tr><td><code>[Весь модуль]</code></td><td>Вендорские аппаратные расширения</td><td style="color: #e74c3c;"><b>Нет</b></td><td style="color: #e74c3c;"><b>Нет</b></td><td><b>BLOCKED/NOT FOUND</b> на обеих платформах.</td></tr>
+
+  </tbody>
+</table>
